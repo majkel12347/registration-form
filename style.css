@@ -1,0 +1,23 @@
+#form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid gray; 
+    padding: 20px 2%;
+    border-radius: 1%;
+    line-height: 3;
+}
+input{
+    padding: 10px;
+    border-radius: 1%;
+}
+#email{
+    margin-bottom: 20px;
+}
+
+
+#btn{
+    padding: 10px 2%;
+}
