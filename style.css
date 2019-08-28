@@ -8,10 +8,19 @@
     padding: 20px 2%;
     border-radius: 1%;
     line-height: 3;
+    background-color: rgba(180, 197, 214, 0.8);
+    box-shadow: 0px 2px 0px 2px lightgray;
+    transition: all 1s ease-out;
+    position: relative;
+}
+#form:hover{
+    box-shadow: 0px 2px 0px 2px gray;
+    transition: all 1s ease;
 }
 input{
     padding: 10px;
     border-radius: 1%;
+    border-bottom: 3px solid lightgray;
 }
 #email{
     margin-bottom: 20px;
@@ -19,5 +28,36 @@ input{
 
 
 #btn{
+    margin-top: 20px;
     padding: 10px 2%;
+}
+
+#ico1{
+    position: absolute;
+    top: 75px;
+    left: 380px;
+}
+
+#ico2{
+    position: absolute;
+    top: 163px;
+    left: 380px;
+}
+
+#ico3{
+    position: absolute;
+    top: 253px;
+    left: 380px;
+}
+#btn{
+    background-color: #456;
+    text-transform: uppercase;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+#btn:active{
+ color:lightGray;
+
 }
