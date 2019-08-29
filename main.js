@@ -12,22 +12,33 @@ const enterPass = document.querySelector('.enterPass');
 sub.addEventListener('click', function (e) {
   //  e.preventDefault();
 
-    if(name.value === '' || name.value.length < 3 || name.value > 10 || mail.value === '' || pass.value === '' || pass.value.length < 6 ){
+    if(name.value === '' || name.value.length < 3 || name.value > 10){
         e.preventDefault();
         name.style.borderBottom = '3px solid rgba(205, 0, 0, .3)';
-        mail.style.borderBottom = '3px solid rgba(205, 0, 0, .3)';
-        pass.style.borderBottom = '3px solid rgba(205, 0, 0, .3)';
+       
       
         enterName.style.color = 'red'; 
         enterName.innerHTML = 'Please Enter Your Name';
-
-        enterMail.style.color = 'red'; 
-       enterMail.innerHTML = 'Please Enter Your Email';
-
-       enterPass.style.color = 'red'; 
-       enterPass.innerHTML = 'Please Enter Your Password';
         
-    } if (name.value.length > 3  || mail.value !== '' || pass.value !== '' || pass.value.length > 6){
+    }
+    else if( mail.value === ''){
+        e.preventDefault();
+       
+           mail.style.borderBottom = '3px solid rgba(205, 0, 0, .3)';
+       
+           enterMail.style.color = 'red'; 
+           enterMail.innerHTML = 'Please Enter Your Email';
+
+    }
+    else if(pass.value === '' || pass.value.length < 6){
+        e.preventDefault();
+
+         pass.style.borderBottom = '3px solid rgba(205, 0, 0, .3)';
+         enterPass.style.color = 'red'; 
+         enterPass.innerHTML = 'Please Enter Your Password';
+    }
+    
+    else if (name.value.length > 3  || mail.value !== '' || pass.value !== '' || pass.value.length > 6){
         name.style.borderBottom = '3px solid lightgray';
         mail.style.borderBottom = '3px solid lightgray';
         pass.style.borderBottom = '3px solid lightgray';
@@ -52,3 +63,5 @@ mail.addEventListener('click', ev => {
 pass.addEventListener('click', ev => {
      ico3.classList.add('play');
 })
+
+// ok all done
